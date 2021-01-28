@@ -1,0 +1,2 @@
+﻿Hier sind ein paar kleine Praxisbeispiele für die Verwendung von drei WinAppDriver Selektoren (locators), 
+ACCESSIBILITY ID, NAME und XPATH, präsentiert durch (parametrisierte) NUnit-Tests des Windows Rechners.
