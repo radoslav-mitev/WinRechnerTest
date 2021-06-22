@@ -32,7 +32,7 @@ namespace WinRechnerTest
             this.driver.FindElementByName("Plus").Click();
             this.driver.FindElementByName("Sieben").Click();
             this.driver.FindElementByName("Gleich").Click();
-            Assert.AreEqual("8.", GetCalculatorResultText());
+            Assert.AreEqual("8", GetCalculatorResultText());
         }
        
         [Test]
@@ -45,7 +45,7 @@ namespace WinRechnerTest
             this.driver.FindElementByAccessibilityId("num1Button").Click();
             this.driver.FindElementByAccessibilityId("num1Button").Click();
             this.driver.FindElementByAccessibilityId("equalButton").Click();
-            Assert.AreEqual("8.", GetCalculatorResultText());
+            Assert.AreEqual("8", GetCalculatorResultText());
         }
 
         [Test]
@@ -56,13 +56,13 @@ namespace WinRechnerTest
             this.driver.FindElementByXPath("//Button[@AutomationId=\"minusButton\"]").Click();
             this.driver.FindElementByXPath("//Button[@AutomationId=\"num1Button\"]").Click();
             this.driver.FindElementByXPath("//Button[@AutomationId=\"equalButton\"]").Click();
-            Assert.AreEqual("8.", GetCalculatorResultText());
+            Assert.AreEqual("8", GetCalculatorResultText());
         }
 
         [Test]
-        [TestCase("Eins", "Plus", "Sieben", "8.")]
-        [TestCase("Neun", "Minus", "Eins", "8.")]
-        [TestCase("Acht", "Dividieren durch", "Acht", "1.")]
+        [TestCase("Eins", "Plus", "Sieben", "8")]
+        [TestCase("Neun", "Minus", "Eins", "8")]
+        [TestCase("Acht", "Dividieren durch", "Acht", "1")]
         public void SolvingAnEquation(string input1, string operation, string input2, string expectedResult)
         {
             // Run sequence of button presses specified above and validate the results
